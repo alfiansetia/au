@@ -1,0 +1,16 @@
+# Log / file sementara
+*.log
+clone.log
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node (kalau nanti ada tooling)
+node_modules/
