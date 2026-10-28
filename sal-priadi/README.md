@@ -16,7 +16,19 @@ Buka: <http://localhost/au/sal-priadi/> — PIN lock screen: **1121**.
 | Kampus | Universitas Cakrawala, Jakarta (dulu Jungyeon/Seoul) |
 | Lagu | Senja Kota, Ruang Tunggu, Pulang, Sisa Hujan, Jakarta Sore |
 | Tanggal | `2026-10-17`, format tanggal Indonesia (`16 Okt`, `Oktober 2026`) |
-| Aset | galeri = foto stok sementara (Picsum/Unsplash, lihat bawah); avatar/cover/wallpaper = placeholder grafis |
+| Aset | galeri = foto panggung asli Sal (CC BY 3.0, lihat bawah) + foto stok bebas (Picsum); avatar = foto asli Sal; cover lagu = grafis judul; wallpaper = gradasi baru |
+## Foto asli Sal (berlisensi, bukan dummy)
+
+Satu-satunya foto bebas di Commons: `File:Sal Priadi in 2020.png` (CC BY 3.0, PFvideoworks,
+live Panggung Gembira 2020) — dipakai untuk:
+
+- `media/sal_kakao_profile.jpg` + `media/sal_instagram_avatar.jpg` (avatar chat/Kakao/IG/telepon)
+- `photos/sal_live_2020.jpg`, `sal_live_closeup.jpg` (galeri terdepan) + `sal_ig_01..03.jpg` (grid IG)
+- Atribusi sudah ada di footer index utama.
+
+Sisanya galeri kampus/kehidupan = stok Picsum bebas pakai (bukan wajah orang lain).
+`media/sohee_01..04.jpg` = grafis judul lagu Sal (bukan dummy).
+Yang masih placeholder dan wajib diganti sebelum publikasi: `media/*.mp3`, `*.mp4`.
 
 ## Ganti aset (penting sebelum publish)
 

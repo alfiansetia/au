@@ -215,7 +215,7 @@ const UI={
  missedCall:L6('부재중 전화','Missed Call','不在着信','未接来电','Cuộc gọi nhỡ','สายที่ไม่ได้รับ'),
 };
 /* Bahasa Indonesia */
-const UI_ID={home:'Beranda',now:'sekarang',bdayTitle:'Ulang Tahun 이소희 🎂',bdayEvent:'Ulang Tahun 이소희',inDays:'{0} hari lagi',swipeUp:'Gesek ke atas untuk membuka',enterPass:'Masukkan Kode Sandi',emergency:'Darurat',cancel:'Batal',delete:'Hapus',
+const UI_ID={home:'Beranda',now:'sekarang',bdayTitle:'Ulang Tahun Ara 🎂',bdayEvent:'Ulang Tahun Ara',inDays:'{0} hari lagi',swipeUp:'Gesek ke atas untuk membuka',enterPass:'Masukkan Kode Sandi',emergency:'Darurat',cancel:'Batal',delete:'Hapus',
 app_maps:'Peta',app_instagram:'Instagram',app_photos:'Foto',app_mail:'Mail',app_calendar:'Kalender',app_clock:'Jam',app_notes:'Catatan',app_weather:'Cuaca',app_settings:'Pengaturan',app_phone:'Telepon',app_safari:'Safari',app_kakao:'KakaoTalk',app_music:'Musik',
 allDay:'Sepanjang hari',seoul:'Seoul',mostlySunny:'Sebagian Besar Cerah',hiLo:'T:21° R:12°',search:'Cari',folders:'Folder',pinned:'Disematkan',notesSec:'Catatan',nNotes:'{0} Catatan',yesterday:'Kemarin',noEvents:'Tidak Ada Acara',today:'Hari Ini',calendars:'Kalender',inbox:'Kotak Masuk',edit:'Edit',
 alarm:'Alarm',alarmLabel:'Alarm',sleepWake:'🛏 Tidur | Bangun',noAlarm:'Tidak Ada Alarm',setUp:'Atur',other:'Lainnya',worldClock:'Jam Dunia',stopwatch:'Stopwatch',timer:'Timer',all:'Semua',missed:'Tak Terjawab',recents:'Terbaru',mobile:'seluler',favorites:'Favorit',contacts:'Kontak',keypad:'Papan Tombol',voicemail:'Pesan Suara',

@@ -1,0 +1,2 @@
+// Jam tiap pesan chat (menit) - parodi Prabowo
+const CHAT_TIMES={"Bapak Prabowo":[null,482,484,486,488,490,492,494,496,498,500,502,null,504,506,508,510,512,514,516,518,520,522],"Ajudan Ted":[null,482,484,486,488,null,490,492,494,496],"Tim Media Istana":[null,482,484,486,488],"Mama":[null,482,484,486,488],"Pengumuman Istana":[null,482,484],"Grup Dokumentasi":[null,482,484,486]};

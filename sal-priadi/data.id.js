@@ -5170,7 +5170,7 @@ const mediaLabels={
  },
  "[Selfie Ruang Latihan]": {
   "kind": "image",
-  "src": "photos/sohee_practice_approved.jpg"
+  "src": "photos/sal_live_2020.jpg"
  },
  "[Selfie Hoodie Ngantuk]": {
   "kind": "image",
@@ -5191,6 +5191,8 @@ const photoSections=[
  [
   "Oktober 2026",
   [
+   "sal_live_2020.jpg",
+   "sal_live_closeup.jpg",
    "campus_01.jpg",
    "campus_02.jpg",
    "campus_03.jpg",
