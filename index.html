@@ -4,38 +4,130 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Koleksi Persona</title>
+<meta name="description" content="Koleksi cerita interaktif berbentuk layar HP. Pilih karakter, buka iPhone-nya.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230ea5e9'/><text x='50' y='70' font-size='58' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'>P</text></svg>">
 <style>
-  :root{color-scheme:dark}
   *{box-sizing:border-box}
-  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;
-       font-family:-apple-system,"Segoe UI",Roboto,sans-serif;
-       background:radial-gradient(120% 120% at 50% 0%,#1e293b 0%,#0b1120 60%)}
-  h1{font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0 0 6px;color:#f8fafc}
-  p.sub{margin:0 0 28px;color:#94a3b8;font-size:14px}
-  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px;width:100%}
-  a.card{display:block;padding:20px;border-radius:18px;text-decoration:none;color:#f8fafc;
-         background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
-         transition:transform .2s ease,background .2s ease}
-  a.card:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}
-  .tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:999px;margin-bottom:10px;
-       background:rgba(56,189,248,.15);color:#7dd3fc;letter-spacing:.04em;text-transform:uppercase}
-  .tag.alt{background:rgba(244,114,182,.15);color:#f9a8d4}
-  b{display:block;font-size:17px;font-weight:600;margin-bottom:4px}
-  small{color:#94a3b8;font-size:13px;line-height:1.5;display:block}
+  :root{
+    --bg:#070b14; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.09);
+    --text:#f1f5f9; --muted:#94a3b8; --accent:#38bdf8;
+    color-scheme:dark;
+  }
+  body{
+    margin:0; min-height:100vh; color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+    background:
+      radial-gradient(80% 55% at 50% -10%, #14324a 0%, transparent 60%),
+      radial-gradient(60% 40% at 90% 10%, #2a1038 0%, transparent 55%),
+      var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:clamp(28px,6vw,64px) clamp(18px,4vw,28px) 48px}
+
+  header{margin-bottom:clamp(24px,4vw,40px)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;
+           text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .eyebrow::before{content:"";width:18px;height:1px;background:var(--accent);opacity:.6}
+  h1{margin:0 0 10px;font-size:clamp(28px,5vw,40px);line-height:1.1;letter-spacing:-.03em;font-weight:650}
+  .sub{margin:0;color:var(--muted);font-size:15px;line-height:1.6;max-width:52ch}
+  .count{display:inline-block;margin-left:8px;font-size:12px;color:var(--muted);
+         border:1px solid var(--line);border-radius:999px;padding:2px 9px;vertical-align:middle}
+
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+
+  a.card{
+    position:relative;display:block;border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;
+    background:var(--card);border:1px solid var(--line);
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s;
+    box-shadow:0 1px 0 rgba(255,255,255,.04) inset;
+  }
+  a.card:hover,a.card:focus-visible{
+    transform:translateY(-6px);border-color:rgba(56,189,248,.45);
+    box-shadow:0 24px 60px -24px rgba(56,189,248,.35);
+    outline:none;
+  }
+  .shot{position:relative;aspect-ratio:4/5;overflow:hidden;background:#111}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block;
+            transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .4s}
+  a.card:hover .shot img{transform:scale(1.05)}
+  .shot::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(7,11,20,.35) 0%,transparent 32%,transparent 48%,rgba(7,11,20,.92) 100%)}
+
+  .chip{position:absolute;z-index:2;top:14px;font-size:11px;letter-spacing:.03em;
+        padding:5px 10px;border-radius:999px;background:rgba(7,11,20,.55);
+        border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);color:#e2e8f0}
+  .chip.dev{left:14px}
+  .chip.lang{right:14px}
+  .chip.warn{background:rgba(234,179,8,.16);border-color:rgba(234,179,8,.35);color:#fde68a}
+
+  .overlay{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:18px 18px 16px}
+  .name{font-size:21px;font-weight:650;letter-spacing:-.02em;margin:0 0 3px}
+  .tag{margin:0;font-size:13px;color:#cbd5e1}
+
+  .meta{display:flex;align-items:center;justify-content:space-between;gap:12px;
+        padding:13px 18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .stats{display:flex;gap:14px}
+  .stats span{display:inline-flex;align-items:center;gap:5px}
+  .go{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-weight:560;white-space:nowrap}
+  .go svg{transition:transform .3s}
+  a.card:hover .go svg{transform:translateX(3px)}
+
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+         font-size:12px;color:#64748b;line-height:1.7}
+  footer a{color:#94a3b8;text-decoration:none;border-bottom:1px solid rgba(148,163,184,.3);
+           padding-bottom:1px;transition:color .2s,border-color .2s}
+  footer a:hover{color:var(--accent);border-color:rgba(56,189,248,.5)}
+  @media (max-width:520px){ .grid{grid-template-columns:1fr} }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
 </style>
 </head>
 <body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Interactive Fiction</div>
+    <h1>Koleksi Persona <span class="count">2 karakter</span></h1>
+    <p class="sub">Tiap karakter adalah satu layar HP yang bisa dijelajahi — chat, galeri, musik, dan panggilan. Klik kartunya untuk membuka.</p>
+  </header>
+
   <main class="grid">
     <a class="card" href="./wonbin-phone.pages.dev/">
-      <span class="tag">Original</span>
-      <b>Wonbin · Sohee</b>
-      <small>Klon asli, 7 bahasa (ko/en/ja/zh/vi/th/id).</small>
+      <div class="shot">
+        <span class="chip dev">iOS 17</span>
+        <span class="chip lang">7 bahasa</span>
+        <img src="./assets/sohee.jpg" alt="Sohee" loading="lazy">
+        <div class="overlay">
+          <p class="name">Wonbin · Sohee</p>
+          <p class="tag">Kampus, kelas MKU, dan chat tengah malam</p>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="stats"><span>48 foto</span><span>5 lagu</span><span>3 reels</span></div>
+        <span class="go">Buka <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>
+      </div>
     </a>
+
     <a class="card" href="./sal-priadi/">
-      <span class="tag alt">Indonesia</span>
-      <b>Sal Priadi · Nara</b>
-      <small>Versi Indonesia, 1 bahasa, aset placeholder.</small>
+      <div class="shot">
+        <span class="chip dev">iOS 17</span>
+        <span class="chip lang">Indonesia</span>
+        <img src="./assets/sal-priadi.jpg" alt="Sal Priadi" loading="lazy">
+        <div class="overlay">
+          <p class="name">Sal Priadi · Nara</p>
+          <p class="tag">Universitas Cakrawala, Jakarta</p>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="stats"><span>48 foto</span><span>5 lagu</span><span>3 reels</span></div>
+        <span class="go">Buka <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>
+      </div>
     </a>
   </main>
+
+  <footer>
+    Foto Sal Priadi: <a href="https://commons.wikimedia.org/wiki/File:Sal_Priadi_in_2020.png" target="_blank" rel="noopener">PFvideoworks</a>
+    via Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>.<br>
+    Persona "Sal Priadi" adalah karya penggemar; bukan afiliasi resmi.
+  </footer>
+</div>
 </body>
 </html>
