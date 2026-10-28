@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Koleksi Persona</title>
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;
+       font-family:-apple-system,"Segoe UI",Roboto,sans-serif;
+       background:radial-gradient(120% 120% at 50% 0%,#1e293b 0%,#0b1120 60%)}
+  h1{font-size:22px;font-weight:600;letter-spacing:-.02em;margin:0 0 6px;color:#f8fafc}
+  p.sub{margin:0 0 28px;color:#94a3b8;font-size:14px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px;width:100%}
+  a.card{display:block;padding:20px;border-radius:18px;text-decoration:none;color:#f8fafc;
+         background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+         transition:transform .2s ease,background .2s ease}
+  a.card:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}
+  .tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:999px;margin-bottom:10px;
+       background:rgba(56,189,248,.15);color:#7dd3fc;letter-spacing:.04em;text-transform:uppercase}
+  .tag.alt{background:rgba(244,114,182,.15);color:#f9a8d4}
+  b{display:block;font-size:17px;font-weight:600;margin-bottom:4px}
+  small{color:#94a3b8;font-size:13px;line-height:1.5;display:block}
+</style>
+</head>
+<body>
+  <main class="grid">
+    <a class="card" href="./wonbin-phone.pages.dev/">
+      <span class="tag">Original</span>
+      <b>Wonbin · Sohee</b>
+      <small>Klon asli, 7 bahasa (ko/en/ja/zh/vi/th/id).</small>
+    </a>
+    <a class="card" href="./sal-priadi/">
+      <span class="tag alt">Indonesia</span>
+      <b>Sal Priadi · Nara</b>
+      <small>Versi Indonesia, 1 bahasa, aset placeholder.</small>
+    </a>
+  </main>
+</body>
+</html>

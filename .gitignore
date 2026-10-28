@@ -14,3 +14,8 @@ Desktop.ini
 
 # Node (kalau nanti ada tooling)
 node_modules/
+
+# folder foto mentah (sumber aset, tidak perlu di-commit)
+_foto-mentah/
+_cover/
+_wall/
