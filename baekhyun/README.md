@@ -14,7 +14,7 @@ Buka: <http://localhost/au/baekhyun/> — PIN lock screen: **1121**.
 | Grup chat | Pengumuman Fakultas, Grup Tugas Jurusan, Presentasi MKU 4 |
 | Kampus | Universitas Seoyeon, Seoul (Yeonnam-dong) |
 | Lagu | Bambi, Candy, Pineapple Slice, UN Village, Hello |
-| Aset | **placeholder** semua (gradient berlabel) — belum foto/audio asli |
+| Aset | galeri = foto stok sementara (Picsum/Unsplash); avatar/cover/wallpaper = placeholder grafis |
 
 ## Ganti aset
 
@@ -28,6 +28,7 @@ cd C:\laragon\www\au\baekhyun\tools
 
 Catatan: `media/*.mp3` dan `media/*.mp4` masih file asli dari situs sumber — wajib diganti
 sebelum dipublikasikan. Judul lagu (Bambi, Candy, dst) hanya teks, bukan audio asli.
+Galeri berisi foto stok sementara (Picsum/Unsplash); ganti via `tools/siapkan-aset.ps1`.
 
 Cover index (`assets/baekhyun.jpg`): foto red carpet Billboard K POWER 100 2024,
 © K-POPIT via Wikimedia Commons, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).

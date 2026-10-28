@@ -16,9 +16,13 @@ Buka: <http://localhost/au/sal-priadi/> — PIN lock screen: **1121**.
 | Kampus | Universitas Cakrawala, Jakarta (dulu Jungyeon/Seoul) |
 | Lagu | Senja Kota, Ruang Tunggu, Pulang, Sisa Hujan, Jakarta Sore |
 | Tanggal | `2026-10-17`, format tanggal Indonesia (`16 Okt`, `Oktober 2026`) |
-| Aset | **placeholder** semua (gradient berlabel) — belum foto/audio asli |
+| Aset | galeri = foto stok sementara (Picsum/Unsplash, lihat bawah); avatar/cover/wallpaper = placeholder grafis |
 
 ## Ganti aset (penting sebelum publish)
+
+> Galeri (`photos/`) saat ini berisi **foto stok sementara** dari Picsum (foto Unsplash,
+> lisensi bebas pakai). Ceritanya menyebut selfie/foto spesifik (mis. "selfie usai olahraga"),
+> jadi idealnya tetap diganti foto asli lewat tool di bawah.
 
 Ada tool otomatis: taruh foto mentah di satu folder, lalu jalankan
 
